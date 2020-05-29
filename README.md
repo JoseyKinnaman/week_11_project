@@ -1,24 +1,33 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Week 11 Ruby Friday Project
+#### By Jozy Kinnaman
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+_A Ruby Rails app to allow users to add reviews and products to Mario's Specialty Food site_
 
-* System dependencies
 
-* Configuration
+## Setup/Installation Requirements to run locally:
 
-* Database creation
+* _Step 1: Clone this repository https://github.com/jozypants/week_11_project_
+* _Step 2: Cd to new directory_
+* _Step 3: Run Bundle install_
+* _Step 4: Run rails s_
 
-* Database initialization
 
-* How to run the test suite
+## Specifications
+* Create new products with cost and and origin.
+* Edit products
+* Delete products
+* Allow user to review products.
+* Update reviews.
+* Delete reviews.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies Used
 
-* Deployment instructions
+* Ruby
+* Rails
+* HTML
+* FAKER
 
-* ...
+Copyright (c) 2020 **_Jozy Kinnaman_**
