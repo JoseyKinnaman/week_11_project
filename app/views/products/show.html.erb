@@ -8,7 +8,7 @@
 
   <% @product.reviews.each do |review| %>
     <ul>
-      <li>
+      <li> 
         <%= link_to review.content_body, product_review_path(@product, review) %>
       </li>
     </ul>
