@@ -8,4 +8,5 @@ describe Product do
   it("titleizes the name of an product") do
     product = product.create({name: "pastrami pickles", cost: 5, country_of_origin: "usa"})
     expect(product.name()).to(eq("Pastrami Pickles"))
+  end
 end
