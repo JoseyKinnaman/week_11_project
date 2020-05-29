@@ -1,0 +1,28 @@
+<div>
+  <h1>Add a review:</h1>
+  <div class = "row">
+    <div class ="col-md-6">
+    <%= form_for [@product, @review] do |f| %>
+      <%= f.label :author %>
+      <%= f.text_field :author %>
+      <br>
+      <%= f.label :review %>
+      <%= f.text_area :content_body %>
+      <br>
+      <%= f.label(:rating) %>  
+      <%= label_tag(:rating, "1") %>
+      <%= radio_button_tag(:rating, "1") %> 
+      <%= label_tag(:rating, "2") %>
+      <%= radio_button_tag(:rating, "2") %>
+      <%= label_tag(:rating, "3") %>
+      <%= radio_button_tag(:rating, "3") %>
+      <%= label_tag(:rating, "4") %>
+      <%= radio_button_tag(:rating, "4") %>
+      <%= label_tag(:rating, "5") %>
+      <%= radio_button_tag(:rating, "5") %>
+      <br>
+      <p><%= f.submit %></p>
+    <% end %>
+    </div>
+  </div>
+</div> 

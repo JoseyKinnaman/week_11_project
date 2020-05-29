@@ -1,29 +1,40 @@
 class ReviewsController < ApplicationController
-  def index
-    # Code for listing all albums goes here.
-  end
-
   def new
-    # Code for new album form goes here.
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new
+    render :new 
   end
 
   def create
-    # Code for creating a new album goes here.
+    @product = Product.find(params[:product_id])
+    @review = @product.reviews.new(review_params)
+    if @review.save
+      redirect_to product_path(@product)
+    else
+      render :new
+    end
   end
 
   def edit
-    # Code for edit album form goes here.
+    # Code for edit product form goes here.
   end
 
   def show
-    # Code for showing a single album goes here.
+    @product = Product.find(params[:product_id])
+    @review = Review.find(params[:id])
+    render :show
   end
 
   def update
-    # Code for updating an album goes here.
+    # Code for updating an product goes here.
   end
 
   def destroy
-    # Code for deleting an album goes here.
+    # Code for deleting an product goes here.
+  end
+
+  private 
+  def review_params
+    params.require(:review).permit(:author, :content_body, :rating)
   end
 end
