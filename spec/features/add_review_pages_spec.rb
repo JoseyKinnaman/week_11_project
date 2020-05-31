@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe "the add a product process" do
-  it "adds a new product" do
+describe "the add a review process" do
+  it "gives an error when no reviews content is entered" do
     test_product = Product.new({name: "Safron", cost: 7, country_of_origin: "Spain"})
     test_product.save
     visit products_path
