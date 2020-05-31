@@ -9,6 +9,10 @@ _A Ruby Rails app to allow users to add reviews and products to Mario's Specialt
 ## Setup/Installation Requirements to run locally:
 * _Step 1: Clone this repository https://github.com/jozypants/week_11_project_
 * _Step 2: Cd to new directory_
+* _Step 3: Run the following in the terminal..._
+  * _createdb week_11_project_development_
+  * _psql week_11_project_development < database_backup.sql_
+  * _createdb -T week_11_project_development week_11_project_test
 * _Step 3: Run Bundle install_
 * _Step 4: Run rails s_
 
