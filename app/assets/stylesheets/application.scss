@@ -1,2 +1,22 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.box {
+  margin: 10% 10% 5% 10%;
+  padding: 20px;
+  border-radius: 20px;
+  border: groove grey 2px;
+  background-color: seashell;
+}
+
+h1 {
+  text-align: center;
+}
+
+.heading{
+  text-align: center;
+}
+
+body {
+  background-color:rgb(163,176,203);
+}

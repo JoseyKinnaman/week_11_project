@@ -1,20 +1,22 @@
-<div class="row">
-  <div class="col-md-6">
+<div class="box">
+  <div class="row">
     <h1>Mario's Specialty Food Products</h1>
-      <p>Amazing products from around the globe.</p>
+      <p class="heading">Amazing products from around the globe.</p>
+        <div class="col-md-6">
         <h2>Available Products</h2>
-        
-      <% if @products.any? %>
-      <ul>
-        <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-        <% end %>
-      </ul>
-      <% else %>
-      <p>There are no products yet.</p>
-      <% end %>
-       <p><%= link_to "Create new product", new_product_path %></p>
+          <% if @products.any? %>
+          <ul>
+            <% @products.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %></li>
+            <% end %>
+          </ul>
+          <% else %>
+          <p>There are no products yet.</p>
+          <% end %>
+          <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
+          <p><%= link_to "Create new product", new_product_path %></p>
+        </div>
+      <div class="col-md-6">
     </div>
-    <div class="col-md-6">
-    </div>
+  </div>
 </div>

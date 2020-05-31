@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all 
+    @products = Product.all.pagination_request(params[:page]) 
     render :index 
   end
 
