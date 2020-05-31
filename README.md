@@ -12,7 +12,7 @@ _A Ruby Rails app to allow users to add reviews and products to Mario's Specialt
 * _Step 3: Run the following in the terminal..._
   * _createdb week_11_project_development_
   * _psql week_11_project_development < database_backup.sql_
-  * _createdb -T week_11_project_development week_11_project_test
+  * _createdb -T week_11_project_development week_11_project_test_
 * _Step 3: Run Bundle install_
 * _Step 4: Run rails s_
 
