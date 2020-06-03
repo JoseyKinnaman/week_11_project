@@ -1,22 +1,17 @@
 <div class="box">
-  <div class="row">
-    <h1>Mario's Specialty Food Products</h1>
-      <p class="heading">Amazing products from around the globe.</p>
-        <div class="col-md-6">
-        <h2>Available Products</h2>
-          <% if @products.any? %>
-          <ul>
-            <% @products.each do |product| %>
-            <li><%= link_to product.name, product_path(product) %></li>
-            <% end %>
-          </ul>
-          <% else %>
+  <h1>Mario's Specialty Food Products</h1>
+    <p class="heading">Amazing products from around the globe.</p>
+      <h2>Available Products</h2>
+      <% if @products.any? %>
+      <ul>
+        <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+      </ul>
+        <% else %>
           <p>There are no products yet.</p>
-          <% end %>
-          <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
-          <p><%= link_to "Create new product", new_product_path %></p>
-        </div>
-      <div class="col-md-6">
-    </div>
-  </div>
+        <% end %>
+        <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
+        <p><%= link_to "Create new product", new_product_path %></p>
+        <footer><p><%= link_to "Return to Homepage", home_path %></p>
 </div>

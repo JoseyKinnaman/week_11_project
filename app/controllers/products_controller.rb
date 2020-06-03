@@ -4,6 +4,13 @@ class ProductsController < ApplicationController
     render :index 
   end
 
+  def home 
+    @products = Product.all
+    @recent_three = Product.most_recent
+    @top_rated = Product.top_rating
+    render :home
+  end
+
   def new
     @product = Product.new 
 
