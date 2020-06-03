@@ -12,7 +12,6 @@ _A Ruby Rails app to allow users to add reviews and products to Mario's Specialt
 * _Open in VS Code or similar program_
 * _Step 3: Run the following in the terminal..._
    * _rake db:create_
-   * _rails generate migration create... (to create tables listed in database_backup.sql and create migration files)_
    * _rake db:migrate_
    * _rake db:test:prepare_
 * _Step 3: Run Bundle install_

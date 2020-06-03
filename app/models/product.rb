@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   has_many :reviews, dependent: :destroy
   validates :name,:cost, :country_of_origin, presence: true
   validates :cost, numericality: { only_integer: true }
-  validates :cost, numericality: { greater_than: 1 }
+  validates :cost, numericality: { greater_than: 0 }
   before_save(:titleize_product)
 
   scope :most_recent, -> { order(created_at: :desc).limit(3)}
