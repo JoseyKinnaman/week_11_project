@@ -18,3 +18,5 @@ class Product < ApplicationRecord
       self.name = self.name.titleize
     end 
 end
+
+k
