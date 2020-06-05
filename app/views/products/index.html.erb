@@ -1,17 +1,29 @@
 
   <h1>Mario's Specialty Food Products</h1>
     <p class="heading">Amazing products from around the globe.</p>
-      <h2>Available Products</h2>
-      <% if @products.any? %>
-      <ul>
-        <% @products.each do |product| %>
-        <li><%= link_to product.name, product_path(product) %></li>
-      <% end %>
-      </ul>
-        <% else %>
-          <p>There are no products yet.</p>
-        <% end %>
-         <%= image_tag "zero_waste_store.jpg" %>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-md-5">
+        <h2>Available Products</h2>
+         <% if @products.any? %>
+        <ul>
+          <% @products.each do |product| %>
+          <li><%= link_to product.name, product_path(product) %></li>
+         <% end %>
+        </ul>
+          <% else %>
+            <p>There are no products yet.</p>
+          <% end %>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <br>
+          <br>
+            <%= image_tag "farmer.jpg" %>
+        </div>
+    
+      </div>
         <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
         <% if current_user && current_user.admin %>
         <p><%= link_to "Create new product", new_product_path %></p>
