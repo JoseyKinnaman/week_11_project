@@ -11,6 +11,7 @@
         <% else %>
           <p>There are no products yet.</p>
         <% end %>
+         <%= image_tag "zero_waste_store.jpg" %>
         <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
         <% if current_user && current_user.admin %>
         <p><%= link_to "Create new product", new_product_path %></p>
