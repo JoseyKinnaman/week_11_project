@@ -7,6 +7,6 @@ describe "#Users" do
       fill_in "user[password]", :with => 'test57'
       fill_in "user[password_confirmation]", :with => 'test57'
       click_on 'Sign up'
-      expect(page).to have_content 'test@test.com'
+      expect(page).to have_content 'Welcome! You have signed up successfully.'
   end
 end
