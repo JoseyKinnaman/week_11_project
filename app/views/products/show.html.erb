@@ -1,6 +1,9 @@
 <h1>Product: <%= @product.name %></h1>
 <h3>Cost: $<%=  @product.cost %></h3>
 <h3>Origin: <%= @product.country_of_origin %></h3>
+<% if @product.product_photo.attached? %>
+  <%= image_tag @product.product_photo %>
+<% end %>
 
 <% if @product.reviews.any? %>
 <h4>Product Reviews:</h4>

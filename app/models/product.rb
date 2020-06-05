@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   validates :cost, numericality: { only_integer: true }
   validates :cost, numericality: { greater_than: 0 }
   before_save(:titleize_product)
+  has_one_attached :product_photo
   
 
   scope :most_recent, -> { order(created_at: :desc).limit(3)}

@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product.product_photo.attach(params[:product][:product_photo])
     if @product.save
       flash[:notice] = "Product added to stock!"
       redirect_to products_path
