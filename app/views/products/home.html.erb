@@ -4,10 +4,13 @@
     <p>Carry ramps you probably haven't heard of them pop-up distillery messenger bag ennui. Pour-over wolf meh. Asymmetrical venmo cold-pressed chicharrones cardigan vice street craft beer. Hashtag pitchfork tumblr street. Lomo retro readymade blog humble.</p>
     <p><%= link_to "Product Catalog", products_path %></p>
       <%= image_tag "zero_waste_store.jpg" %>
-      <div class="col-md-2">
+      <br>
+
+      <div class="col-md-3">
       </div>
-        <div class="col-md-4">
-        <h4>Most Reviewed Products</h4>
+
+        <div class="col-md-2">
+        <h5>Most Reviewed Products</h5>
         <% if @top_rated.any?%>
         <ul>
         <% @top_rated.each do |product| %>
@@ -18,8 +21,22 @@
         <p> There are currently no products to be displayed. </p>
         <% end %>
         </div>
-      <div class="col-md-4">
-      <h4> Newest Products</h4>
+
+        <div class="col-md-2">
+          <h5>Products Made in the United States</p>
+          <% if @usa_made.any?%>
+          <ul>
+          <% @usa_made.each do |product| %>
+            <li><%= link_to product.name, product_path(product) %> </li>
+          <% end %>
+          </ul>
+        <% else %>
+          <p> There are currently no products to be displayed. </p>
+          <% end %>
+        </div>
+
+      <div class="col-md-2">
+      <h5> Newest Products</h5>
       <% if @recent_three.any?%>
         <ul>
         <% @recent_three.each do |product| %>
@@ -30,6 +47,8 @@
         <p> There are currently no products to be displayed. </p>
         <% end %>
     </div>
-    <div class="col-md-2">
+
+    <div class="col-md-3">
   </div>
+
 </div>
