@@ -1,25 +1,23 @@
-<div class="box">
-  <h1>Product: <%= @product.name %></h1>
-  <h3>Cost: $<%=  @product.cost %></h3>
-  <h3>Origin: <%= @product.country_of_origin %></h3>
+<h1>Product: <%= @product.name %></h1>
+<h3>Cost: $<%=  @product.cost %></h3>
+<h3>Origin: <%= @product.country_of_origin %></h3>
 
-  <% if @product.reviews.any? %>
-  <h4>Product Reviews:</h4>
-  <% @product.reviews.each do |review| %>
-    <ul>
-      <li> 
-        <%= link_to review.content_body, product_review_path(@product, review) %>
-      </li>
-    </ul>
-  <% end %>
+<% if @product.reviews.any? %>
+<h4>Product Reviews:</h4>
+<% @product.reviews.each do |review| %>
+  <ul>
+    <li> 
+      <%= link_to review.content_body, product_review_path(@product, review) %>
+    </li>
+  </ul>
+<% end %>
 <% else %>
-  <p>No reviews are listed for this product.</p>
+<p>No reviews are listed for this product.</p>
 <% end %>
 <p><%= link_to "Add a review", new_product_review_path(@product) %></p>
-  <p><%= link_to "Edit", edit_product_path(@product) %></p>
-  <p><%= link_to "Delete", product_path(@product),
-                           :data => {:confirm => "You sure?",
-                                     :method => "delete"} %></p>
-  
-  <p><%= link_to "Return to products", products_path %></p>
-</div>
+<p><%= link_to "Edit", edit_product_path(@product) %></p>
+<p><%= link_to "Delete", product_path(@product),
+                          :data => {:confirm => "You sure?",
+                                    :method => "delete"} %></p>
+
+<p><%= link_to "Return to products", products_path %></p>
