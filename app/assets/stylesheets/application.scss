@@ -5,7 +5,7 @@
   margin: 10% 10% 5% 10%;
   padding: 20px;
   border-radius: 20px;
-  border: solid turquoise 3px;
+  border: solid black 3px;
   background-color: honeydew;
 }
 
@@ -32,5 +32,21 @@ img {
   margin-right: auto;
   width: 50%;
   border: solid gray 3px;
+}
+
+a {
+  color:black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
