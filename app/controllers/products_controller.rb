@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
   def home 
     @products = Product.all
     @recent_three = Product.most_recent
+    # @search = Product.search
     @usa_made = Product.us_made
     @top_rated = Product.top_rating
     render :home

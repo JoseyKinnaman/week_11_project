@@ -3,7 +3,7 @@
 #### By Jozy Kinnaman
 
 ## Description
-_A Ruby Rails app to allow users to add reviews and products to Mario's Specialty Food site_
+_A Ruby Rails app to allow an admin to add reviews and products to Mario's Specialty Food site._
 
 
 ## Setup/Installation Requirements to run locally:
@@ -14,18 +14,20 @@ _A Ruby Rails app to allow users to add reviews and products to Mario's Specialt
    * _rake db:create_
    * _rake db:migrate_
    * _rake db:test:prepare_
+   * _rake db:seed_
 * _Step 3: Run Bundle install_
 * _Step 4: Run rails s_
+* _Make an account and in the Rails console, change admin: to true._
 
 
 ## Specifications
-* A user can create new products with cost and and origin.[√]
+* An admin can create new products with name, cost and origin.[√]
 * A user can view details of a product on their own individual page. [√]
-*  A user can edit products. [√]
-* A user can delete products. [√]
-* A user is able to review products. [√]
-* A user is able to update reviews. [√]
-* A user is able to delete reviews. [√]
+*  An admin can edit products. [√]
+* An admin can delete products. [√]
+* A user/admin is able to review products. [√]
+* An admin user is able to update reviews. [√]
+* An admin is able to delete reviews. [√]
 
 ## Technologies Used
 * Ruby
@@ -35,5 +37,9 @@ _A Ruby Rails app to allow users to add reviews and products to Mario's Specialt
 * Bootsrap
 * Sass
 * FAKER
+* Devise
+* Rspec
+* SimpleCov
+* Capybara
 
 Copyright (c) 2020 **_Jozy Kinnaman_**
