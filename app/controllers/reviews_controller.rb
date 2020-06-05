@@ -12,6 +12,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new(review_params)
+    @review.review_photo.attach(params[:review][:review_photo])
     if @review.save
       redirect_to product_path(@product)
     else
@@ -33,6 +34,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find(params[:id])
+    @review.review_photo.attach(params[:review][:review_photo])
     if @review.update(review_params)
       redirect_to product_path(@review.product)
     else

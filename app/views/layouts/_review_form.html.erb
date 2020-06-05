@@ -19,5 +19,8 @@
       <%= f.label :rating, "5" %>
       <%= f.radio_button(:rating, "5") %> 
       <br>
+      <%= f.label :review_photo %>
+      <%= f.file_field :review_photo%>
+      <br>
       <p><%= f.submit %></p>
     <% end %>

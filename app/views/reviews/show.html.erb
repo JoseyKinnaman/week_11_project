@@ -3,6 +3,9 @@
 
   <h3>Submitted by:</h3> <h4><%= @review.author %></h4>
   <h3>Rated: <%= @review.rating %> stars</h3>
+  <% if @review.review_photo.attached? %>
+  <%= image_tag @review.review_photo %>
+<% end %>
 
 <% if current_user && current_user.admin %>
   <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
