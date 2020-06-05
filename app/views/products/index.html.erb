@@ -12,5 +12,7 @@
           <p>There are no products yet.</p>
         <% end %>
         <%= will_paginate @product, renderer: BootstrapPagination::Rails %>
+        <% if current_user && current_user.admin %>
         <p><%= link_to "Create new product", new_product_path %></p>
+        <% end %>
         <footer><p><%= link_to "Return to Homepage", home_path %></p>
