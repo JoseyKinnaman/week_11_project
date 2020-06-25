@@ -7,7 +7,7 @@ _A Ruby Rails app to allow an admin to add reviews and products to Mario's Speci
 
 
 ## Setup/Installation Requirements to run locally:
-* _Step 1: Clone this repository https://github.com/jozypants/week_11_project_
+* _Step 1: Clone this repository https://github.com/jozypants/week_11_project or view here: https://mariosspecialtyfoods.herokuapp.com/_
 * _Step 2: Cd to new directory_
 * _Open in VS Code or similar program_
 * _Step 3: Run the following in the terminal..._
